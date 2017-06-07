@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family:"Microsoft YaHei";
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+ul {
+    list-style: none;
+}
+input {
+    border-style:none;
+    outline:none;
+}
+html, body {
+    height: 100%;
+}
+.foot_font {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    color: #fff;
+}
+.login {
+    height: 100%;
+    overflow: hidden;
+    background: url(images/loginBG.png) center;
+    background-size: cover;
+    text-align: center;
+}
+.logo {
+    width: 304px;
+    height: 150px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background: url(images/logo.png);
+    background-size: cover;
+}
+.form-bg {
+    width: 650px;
+    height: 460px;
+    background-size: 650px 460px;
+    border-radius: 5px;
+    background-image: url(images/login_bg.png);
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    position: relative;
+}
+.form-bg .form-title {
+    color: #ECC046;
+    position: absolute;
+    width: 380px;
+    border-radius: 100%;
+    background-color: #FFF8E5;
+    box-shadow: 0 8px 2px #E3C983;
+    left: 50%;
+    transform: translateX(-50%) translateY(-30%);
+    font-weight: 900;
+    top: -25px;
+
+    height: 100px;
+    line-height: 100px;
+    font-size: 46px;
+}
+.form-bg .form {
+    height: 100%;
+    width: 100%;
+    font-size: 32px;
+    margin-top: 2%;
+    margin-left: 2%;
+    position: relative;
+}
+.form-bg .form label {
+    position: relative;
+    width: 100%;
+    float: left;
+    color: #FF7608;
+    font-weight:900;
+    display: block;
+}
+.form-bg .form label input {
+    margin-left: 10px;
+    width: 65%;
+    height: 52px;
+    font-size: 18px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 8px;
+    background-color: #FFF7E2;
+    box-shadow: 3px 5px 0 #EACE85;
+    padding-left: 20px;
+}
+.form-bg .form .verify {
+    position: absolute;
+    bottom: -70%;
+    display: none;
+    height: 15px;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    color: red;
+    line-height: 30px;
+    font-weight: 900;
+}
+.query {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    color: #626366;
+    display: none;
+}
+.query i {
+    position: relative;
+    display: inline-block;
+    top: 2px;
+    left: -4px;
+    width: 14px;
+    height: 14px;
+    background-image: url(img/tishi.png);
+    -webkit-background-size: 14px 14px;
+    background-size:14px 14px;
+}
+.form-bg .form .login_btn {
+    width: 170px;
+    height: 56px;
+    background-size: 170px 56px;
+    border: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-70%);
+    bottom: 12%;
+    cursor: pointer;
+    margin-left: 30px;
+    background-image: url(images/login.png);
+}
+.form-bg .form .pwdLabel {
+    margin-top: 5%;
+}
+
+.form-bg .form label:first-child {
+    margin-top: 20%;
+}
+
+.userNameErr, .passWard {
+    position: absolute;
+}
+.userID {
+    padding-left: 14px;
+}
+.userPWD {
+    margin-left: 30px;
+    padding-right: 2px;
+}
+.popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 500px;
+    height: 300px;
+    color: #966c01;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 40px;
+    letter-spacing: 1px;
+    padding: 80px 60px 60px 60px;
+    background-image: url("img/exit_bg.png");
+    background-size:500px 300px;
+    border-radius: 12px;
+    box-sizing: border-box;
+    display: none;
+}
+.p_top {
+    position: absolute;
+    top: -42px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    box-shadow: 0px 8px 2px #E3C983;
+    width: 250px;
+    height: 70px;
+    font-size: 30px;
+    line-height: 70px;
+    color: #d6b250;
+    background-color: #fff4d6;
+}
+.sure {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 50px;
+    width: 140px;
+    height: 50px;
+    background-image: url("img/sure.png");
+    background-size: 140px 50px;
+}

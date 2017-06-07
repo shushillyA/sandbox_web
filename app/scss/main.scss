@@ -1,0 +1,22 @@
+@import 'common';
+@import "game";
+@import "media";
+@import "play";
+html,body,.app,.game,#root{
+  font-family: "Microsoft YaHei";
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  touch-action: none;
+  .exit {
+    width: 120px;
+    height: 120px;
+    background-image: url('../../img/exit.png');
+    -webkit-background-size: 120px;
+    background-size: 120px;
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+  }
+}

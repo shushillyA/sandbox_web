@@ -1,0 +1,231 @@
+body{
+  font-family: "Microsoft JhengHei";
+  font-size: 12px;
+  margin: 0;
+  user-select: none;
+}
+ul,li{padding: 0;margin: 0;}
+li{list-style: none}
+input {
+  outline:none;
+}
+//滚动条
+.rull_bar {
+  width: 10px;
+  height: 400px;
+  background-color: #C68830;
+  box-shadow: 0px -1px #E3D09E;
+  position: absolute;
+  right: 105px;
+  top: 90px;
+  border-radius: 3px;
+  z-index: 8;
+  .rull {
+    position: absolute;
+    width: 16px;
+    height: 25px;
+    left: -3px;
+    top: 3px;
+    background-image: url("../../img/rull.png");
+    -webkit-background-size:16px 25px;
+    background-size: 16px 25px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px #80692C;
+    cursor: pointer;
+    z-index:9;
+  }
+}
+
+.Inv_scroll_bar {
+  position: absolute;
+  right: 17px;
+  top: 30px;
+  width: 1px;
+  height: 180px;
+  background-color: #C68830;
+  z-index: 101;
+  .Inv_scroll {
+    position: absolute;
+    width: 16px;
+    height: 25px;
+    left: -8px;
+    top: 0;
+    background-image: url("../../img/rull.png");
+    -webkit-background-size:16px 25px;
+    background-size: 16px 25px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px #80692C;
+    cursor: pointer;
+    z-index:7;
+  }
+}
+.Inv_scroll_bar_X {
+  position: absolute;
+  left: 77px;
+  bottom: 10px;
+  width: 364px;
+  height: 1px;
+  background-color: #C68830;
+  z-index: 100;
+  .Inv_scroll_X {
+    position: absolute;
+    width: 27px;
+    height: 12px;
+    left: 0;
+    top: -5px;
+    background-image: url("../../img/Inv_scroll_X.png");
+    -webkit-background-size:27px 12px;
+    background-size: 27px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index:101;
+  }
+}
+@media screen and (min-width: 1450px) {
+  .Inv_scroll_bar {
+    height: 225px;
+  }
+  .Inv_scroll_bar_X {
+    width: 465px;
+  }
+}
+
+@media screen and (min-width: 1900px) {
+  .Inv_scroll_bar {
+    right: 26px;
+    top: 50px;
+    height: 290px;
+  }
+  .Inv_scroll_bar_X {
+    left: 90px;
+    width: 620px;
+    bottom: 14px;
+  }
+}
+
+.z1 {
+  z-index: 101;
+}
+.z2 {
+  z-index: 102;
+}
+.z3 {
+  z-index: 103;
+}
+.z4 {
+  z-index: 104;
+}
+.z5 {
+  z-index: 105;
+}
+.z6 {
+  z-index: 106;
+}
+
+.d_n{
+  display: none;
+}
+.wait {
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255,255,255,.3);
+  display: none;
+  text-align: center;
+  line-height:1.5;
+  z-index: 1000;
+  .wait_size {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 400px;
+    height: 260px;
+    border-radius: 10px;
+    background-image: url(../../img/tijiao.png);
+    background-size: 400px 260px;
+    font-size: 28px;
+    font-weight: 900;
+    text-align: center;
+    color: #966c01;
+    padding:80px 60px 0 60px;
+    box-sizing: border-box;
+    input {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 40px;
+      background-size: 114px 40px;
+      width: 114px;
+      height: 40px;
+      display: block;
+      border: none;
+
+    }
+    .err_wait_btn {
+      background-image: url(../../img/err_wait_btn.png);
+      display: none;
+    }
+    .net_wait_btn {
+      background-image: url(../../img/sure.png);
+      display: none;
+    }
+  }
+}
+
+.wait {
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255,255,255,.3);
+  display: none;
+  text-align: center;
+  line-height:1.5;
+  color: #966c01;
+  z-index: 1000;
+  .wait_size {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 400px;
+    height: 260px;
+    border-radius: 10px;
+    background-image: url(../../dist/img/tijiao.png);
+    background-size: 400px 260px;
+    font-size: 26px;
+    font-weight: 900;
+    text-align: center;
+    padding:80px 62px 0 62px;
+    box-sizing: border-box;
+    input {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 40px;
+      background-size: 114px 40px;
+      width: 114px;
+      height: 40px;
+      display: block;
+      border: none;
+
+    }
+    .err_wait_btn {
+      background-image: url(../../img/err_wait_btn.png);
+      display: none;
+    }
+    .net_wait_btn {
+      background-image: url(../../img/sure.png);
+      display: none;
+    }
+    .over_wait_btn {
+      background-image: url(../../img/sure.png);
+      display: none;
+    }
+  }
+
+}

@@ -1,0 +1,45 @@
+/*
+* @Author: soulmate
+* @Date:   2016-12-29 16:25:33
+* @Last Modified by:   soulmate
+* @Last Modified time: 2016-12-30 09:44:36
+*/
+@charset "utf-8";
+/* 效果CSS开始 */
+#softkey {
+	margin: 0px auto;
+	text-align: center;
+	position: absolute;
+	left: -160px;
+	background: #D18357;
+	z-index: 2;
+}
+#softkey div {
+	display: inline-block;
+	background: #D18357;
+}
+#txt_Search {
+	line-height: 24px;
+	height: 24px;
+}
+#softkey2 {
+	margin: 0px auto;
+	text-align: center;
+	position: absolute;
+	left: -160px;
+	background: #D18357;
+	z-index: 2;
+}
+#softkey2 div {
+	display: inline-block;
+	background: #D18357;
+}
+#txt_Search {
+	line-height: 24px;
+	height: 24px;
+}
+#softkey3 {
+	background: #D18357;
+	z-index: 2;
+}
+/* 效果CSS结束 */

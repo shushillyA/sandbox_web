@@ -1,0 +1,400 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #98CBE9;
+}
+
+ul {
+    list-style-type: none;
+}
+
+input {
+    border-style: none;
+    outline: none;
+}
+
+.loading {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url(images/loading.jpg) center;
+    overflow: hidden;
+    background-size: cover;
+    z-index: 10002;
+}
+
+.loading .loading_help {
+    top: 39%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    position: absolute;
+    height: 37.8%;
+    background-image: url(images/loading_help.png);
+    background-size: 100% 100%;
+}
+
+.bar_box {
+    position: absolute;
+    bottom: 60px;
+    left: 47%;
+    width: 60%;
+    height: 28px;
+    transform: translateX(-50%);
+}
+
+.bar_box .loading_bar {
+    position: absolute;
+    border-radius: 100px;
+    width: 100%;
+    height: 100%;
+    background-color: #BE9B3D;
+}
+
+.bar_box .loading_bar .bar {
+    position: absolute;
+    top: 0;
+    /*width: 100px;*/
+    left: 0;
+    height: 100%;
+    background-image: url(images/bar.png);
+    border-radius: 100px;
+}
+
+.bar_box .loading_bar .bar span {
+    position: absolute;
+    right: 10px;
+    font-size: 16px;
+}
+
+.bar_box .loading_bar .bar .loading_gif {
+    position: absolute;
+    top: -71px;
+    right: -10px;
+    width: 50px;
+    height: 71px;
+    background-image: url(images/loading.gif);
+    background-size: 50px 71px;
+}
+
+.bar_box span {
+    padding-left: 20px;
+    font-size: 16px;
+    color: #967419;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.bar_box .loadingOver {
+    display: none;
+}
+
+.loading .loading_help .arrows_left, .loading .loading_help .arrows_right {
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+}
+
+.loading .loading_help .arrows_left {
+    width: 21px;
+    height: 37px;
+    left: 11%;
+    background: url(images/arrows_left_n.png) no-repeat;
+}
+
+.loading .loading_help .arrows_right {
+    width: 22px;
+    height: 37px;
+    right: 11%;
+    background-image: url(images/arrows_right.png);
+}
+
+.loading .loading_help .help_box {
+    position: relative;
+    top: 35%;
+    left: 18%;
+    height: 40%;
+    width: 64%;
+    overflow: hidden;
+}
+
+.loading .loading_help .help_box .sign {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.sign li {
+    border-radius: 5px;
+    margin: 0 4px;
+    width: 20px;
+    height: 8px;
+    float: left;
+}
+
+.all {
+    background-color: #E2C36F;
+}
+
+.current {
+    background-color: #FEEAB6;
+}
+
+.loading .loading_help .help_box .help_ul {
+    position: absolute;
+    width: 400%;
+    height: 100%;
+    top: 10px;
+    left: 20px;
+}
+
+.loading .loading_help .help_box .help_ul li {
+    width: 24.5%;
+    height: 78%;
+    background-repeat: no-repeat;
+    background-size: 90% 90%;
+    margin-left: 0.5%;
+    float: left;
+}
+
+.loading .loading_help .help_box ul .draw {
+    background-image: url(images/draw.png);
+}
+
+.loading .loading_help .help_box ul .scene {
+    background-image: url(images/scene.png);
+}
+
+.loading .loading_help .help_box ul .select {
+    background-image: url(images/select.png);
+}
+
+.loading .loading_help .help_box ul .operation {
+    background-image: url(images/operation.png);
+}
+
+.bar_box {
+    z-index: 10003;
+}
+
+.bar_box .door_size {
+    position: absolute;
+    top: -128px;
+    right: -22%;
+    width: 100px;
+    height: 171px;
+    background-size: 100% 100%;
+}
+
+.bar_box .door {
+    background-image: url(images/door.png);
+}
+
+.bar_box .access {
+    display: none;
+    cursor: pointer;
+    background-image: url(images/access.png);
+}
+
+.help_bg_touch {
+    background-size: 100% 100%;
+    position: absolute;
+    left: 50%;
+    top: 42%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 700px;
+    height: 560px;
+    background-image: url("img/help_bg_touch.png");
+}
+
+.help_bg_touch .help_top {
+    position: absolute;
+    width: 280px;
+    height: 80px;
+    border-radius: 100%;
+    line-height: 80px;
+    color: #ECC046;
+    background-color: #FFF8E5;
+    box-shadow: 0px 8px 2px #E3C983;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 40px;
+    font-weight: 900;
+    text-align: center;
+}
+
+.help_bg_touch .ul_bg {
+    width: 600px;
+    height: 424px;
+    margin-left: 48px;
+    margin-top: 100px;
+    background-image: url("img/ul_bg.png");
+    background-size: 600px 424px;
+    overflow: hidden;
+}
+
+.help_bg_touch .ul_bg ul {
+    position: relative;
+    float: left;
+    width: 8500px;
+    transition: left 1s;
+    left: 0;
+}
+
+.help_bg_touch .ul_bg ul li {
+    position: relative;
+    display: inline-block;
+}
+
+.help_bg_touch .ul_bg ul li img {
+    width: 450px;
+    margin: 54px 74px 56px;
+}
+
+.help_title {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    font-weight: 900;
+    color: #EBD19C;
+}
+
+.help_check {
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+    color: #A0780B;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.help_font {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    bottom: 0;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 900;
+}
+
+dl {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 50px;
+    float: left;
+}
+
+dl dt {
+    float: left;
+    width: 10px;
+    height: 10px;
+    margin: 0 2px;
+    border-radius: 100%;
+    background-color: #ECC868;
+}
+
+.cur_help {
+    background-color: #FEEAB6;
+}
+
+.left, .right {
+    position: absolute;
+    cursor: pointer;
+    width: 22px;
+    height: 37px;
+    top: 42%;
+}
+
+.left {
+    left: 70px;
+    background: url(images/arrows_left_n.png) no-repeat;
+}
+
+.right {
+    right: 70px;
+    background-image: url(images/arrows_right.png);
+}
+.top_pc {
+    top: 22%;
+}
+.top_touch {
+    top: 9%;
+}
+.help_audio {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 510px;
+    height: 40px;
+    z-index: 10;
+}
+
+.help_audio audio {
+    display: none
+}
+
+.help_audio .play {
+    position: relative;
+    width: 45px;
+    height: 40px;
+    background-image: url(img/help_play.png);
+    background-size: 45px 40px
+}
+
+.help_audio .pause {
+    position: relative;
+    width: 45px;
+    height: 40px;
+    background-image: url(img/help_stop.png);
+    background-size: 45px 40px
+}
+
+.help_audio .audio_bar {
+    position: relative;
+    left: 75px;
+    top: -50%;
+    margin-top: -2px;
+    width: 434px;
+    height: 4px;
+    border-radius: 4px;
+    background-color: #c68830
+}
+
+.help_audio .audio_bar .music_bar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 4px;
+    width: 0;
+    border-radius: 4px;
+    background-color: #d96407
+}
+
+.help_audio .audio_bar .audio_button {
+    position: absolute;
+    left: 0;
+    top: -10px;
+    width: 24px;
+    height: 24px;
+    background: url(img/help_b.png);
+    background-size: 24px 24px;
+    border-radius: 100%
+}
+
+.help_audio .audio_bar .audio_button .percent {
+    position: absolute;
+    left: 56%;
+    top: -16px;
+    transform: translateX(-50%);
+    color: #cfae5a
+}

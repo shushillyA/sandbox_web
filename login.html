@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="./keybord/css/style.css">
+</head>
+<body>
+<div class="login">
+    <div class="logo"></div>
+    <div class="form-bg">
+        <div class="form-title">电子沙盘</div>
+        <form class="form" onsubmit="formSubmit(event)" action="#">
+            <label class="firstLabel"><span class="userID">用户名</span><input value="chenghan" type="text"  name="userName" id="userName" placeholder="请输入用户名" class="userName" />
+            </label>
+            <label class="pwdLabel">
+                <span class="userPWD"> 密码 </span><input type="password" name="userPWD" id="userPWD" value="e7e6x83x" placeholder="请输入密码" class="margin_l passWord"/>
+                <span class="verify err">用户名或密码错误</span>
+            </label>
+            <div id="softkey"></div>
+            <inpurt type="submit" value='' class="login_btn" onclick="formSubmit(event)" />
+            <span class="query"><i></i>如有账号问题，请联系管理员老师</span>
+        </form>
+    </div>
+    <div class="popup">
+        <div class="p_top">
+            温馨提示
+        </div>
+       为了您更好的体验，建议您使用chrome浏览器。
+        <input type="submit" value='' class="sure" onclick="tishi()"/>
+    </div>
+    <p class="foot_font"> ©   上海心灵伙伴览育 </p>
+</div>
+<script src="./jquery.min.js"></script>
+<script src="./keybord/vk_loader.js"></script>
+<script src="login.js"></script>
+<script>
+    document.body.addEventListener('touchmove',function(e){
+        e.preventDefault();
+    });
+</script>
+</body>
+</html>

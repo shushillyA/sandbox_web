@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <!--[if lt IE 9]>
+    <script src="http://static.cdn.360xinli.com/static/resource/ie/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="http://static.cdn.360xinli.com/static/resource/ie/respond.js"></script>
+    <![endif]-->
+    <title>登录</title>
+    <link rel="stylesheet" href="http://static.cdn.360xinli.com/static/resource/libs/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://static.cdn.360xinli.com/static/resource/css/base.css">
+    <link rel="stylesheet" href="http://static.cdn.360xinli.com/static/resource/css/layout.css?v=20150825">
+    <script src="http://static.cdn.360xinli.com/static/resource/libs/js/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="http://static.cdn.360xinli.com/static/resource/keybord/css/style.css" />
+    <script src="./vk_loader.js?vk_layout=US%20US&vk_skin=flat_gray"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            //获取焦点清除验证信息
+            $("#username").focus(function(){
+                $(".input_username").hide();
+            });
+            $("#password").focus(function(){
+                $(".input_password").hide();
+            });
+
+            //按键回车enter点击提交
+            $(document).keyup(function(event){
+                if(event.keyCode == "13"){
+                    loginForm();
+                }
+            });
+
+        });
+
+        console.log(VirtualKeyboard);
+        function keyboardNo1(){
+            VirtualKeyboard.toggle('aa', 'softkey');
+            $('#kb_langselector,#kb_mappingselector,#copyrights').css('display', 'none');
+        }
+//        function keyboardNo2(){
+//            VirtualKeyboard.toggle('password', 'softkey2');
+//            $('#kb_langselector,#kb_mappingselector,#copyrights').css('display', 'none');
+//        }
+    </script>
+    <style type="text/css">
+        /*.input_username { display:none;}*/
+        /*.input_password { display:none;}*/
+
+        /*#softkey {*/
+            /*margin: 0px auto;*/
+            /*text-align: center;*/
+            /*position: absolute;*/
+            /*left: -175px;*/
+        /*}*/
+
+        /*#softkey2 {*/
+            /*margin: 0px auto;*/
+            /*text-align: center;*/
+            /*position: absolute;*/
+            /*left: -175px;*/
+        /*}*/
+
+    </style>
+</head>
+<body>
+<div class="login wrapper obj_rectangle">
+    <div class="login_box obj_rectangle">
+        <div class="row">
+            <div class="un_input input_l col-md-6">
+                <input type="text" name="bb" id="aa" onfocus='keyboardNo1();' onBlur="VirtualKeyboard.toggle('aa','softkey');"  />
+                <div id="softkey"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="pw_input input_l col-md-6">
+                <input type="password" value="" id="password"  onfocus='keyboardNo2();' onBlur="VirtualKeyboard.toggle('password','softkey2');" />
+                <div id="softkey2"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>心灵伙伴-沙盘</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta content='width=device-width' name='viewport' />
+    <meta name="msapplication-tap-highlight" content="no" />
+</head>
+<body touch-action="none">
+<link rel="stylesheet" href="dist/css/main.css">
+<div id="root"></div>
+<script src="./jquery.min.js"></script>
+<!--<script src="lib/vender.js"></script>-->
+<script src="/app/lib/pep.min.js"></script>
+<script src="/app/lib/babylon.js"></script>
+<script src="/app/lib/crypto-js.js"></script>
+<script src="/app/lib/babylon.objFileLoader.js"></script>
+<script src="dist/js/bundle.js"></script>
+
+
+<link rel="stylesheet" href="./keybord/css/style.css">
+<script src="./keybord/vk_loader.js"></script>
+
+<script type="text/javascript">
+    if(sessionStorage.isTouch == "true") {
+        $(document).ready(function(){
+            //获取焦点清除验证信息
+            $("#username").focus(function(){
+                $(".input_username").hide();
+            });
+            $("#password").focus(function(){
+                $(".input_password").hide();
+            });
+
+            //按键回车enter点击提交
+            $(document).keyup(function(event){
+                if(event.keyCode == "13"){
+                    loginForm();
+                }
+            });
+            console.log(1);
+            function tag(input) {
+                console.log(2);
+                VirtualKeyboard.toggle(input, 'softkey');
+                $('#kb_langselector,#kb_mappingselector,#copyrights').css('display', 'none');
+            }
+            document.querySelector('#one').onfocus = function () {
+                console.log(3);
+                tag('one');
+            };
+            document.querySelector('#one').onblur = function () {
+                tag('one');
+            };
+            document.querySelector('#two').onfocus = function () {
+                tag('two');
+            };
+            document.querySelector('#two').onblur = function () {
+                tag('two');
+            };document.querySelector('#three').onfocus = function () {
+                tag('three');
+            };
+            document.querySelector('#three').onblur = function () {
+                tag('three');
+            };document.querySelector('#four').onfocus = function () {
+                tag('four');
+            };
+            document.querySelector('#four').onblur = function () {
+                tag('four');
+            };document.querySelector('#five').onfocus = function () {
+                tag('five');
+            };
+            document.querySelector('#five').onblur = function () {
+                tag('five');
+            };document.querySelector('#six').onfocus = function () {
+                tag('six');
+            };
+            document.querySelector('#six').onblur = function () {
+                tag('six');
+            };
+            document.querySelector('#softkey').style.left = '50%';
+            document.querySelector('#softkey').style.transform = 'translateX(-50%)';
+            document.querySelector('#softkey').style.bottom = '70px';
+        });
+    }
+</script>
+</body>
+<div style="display:none">
+    <!-- Baidu -->
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?94da2cfb1fe08a0ccaffe0ba86eccb02";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <!-- CNZZ-->
+    <script src="https://s95.cnzz.com/z_stat.php?id=1261605046&web_id=1261605046" language="JavaScript"></script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-93982287-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+</div>
+</html>

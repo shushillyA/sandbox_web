@@ -1,0 +1,64 @@
+.playScene {
+  height: 100%;
+  .control {
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    bottom:0px;
+    .time{
+      color: #666;
+      position: absolute;
+      right: 15%;
+    }
+    .process{
+      height: 3px;
+      width: 70%;
+      position: relative;
+      cursor: pointer;
+      display: inline-block;
+      &:after{
+        content: '';
+        display: block;
+        width: 100%;
+        position: absolute;
+        background: rgba(255, 255, 255, 0.5);
+        height: 2px;
+        border: 1px solid #bbb;
+        border-radius: 3px;
+      }
+      .bufferBar{
+        position: absolute;
+        left: 0;
+        height: 2px;
+        width: 95%;
+        background: rgba(255, 255, 255, 0.4);
+        border: 1px solid #ccc;
+        border-right: none;
+        border-radius: 3px;
+        z-index: 1;
+      }
+      .currentSpot{
+        position: absolute;
+        left: 0;
+        height: 2px;
+        width:0%;
+        background: #fa7327;
+        border: 1px solid #fa7327;
+        border-radius: 3px;
+        z-index: 2;
+        &:after{
+          content: "";
+          display: block;
+          width: 10px;
+          height: 10px;
+          background: #fa7327;
+          position: absolute;
+          right: -5px;
+          top: -4px;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}
