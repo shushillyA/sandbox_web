@@ -10,7 +10,7 @@ export const getToy = (toy) => {
 
 export const fetchGetToy = (access_token) => {
     return (dispatch) => {
-        return fetch(`https://api.xlhb.com/v1/sandbox/thumbnail-new-list.api`,{
+        return fetch(`https://yufaapi.xlhb.com/v1/sandbox/thumbnail-new-list.api`,{
             method: 'POST',
             headers: {
                 Accept: 'application/json',

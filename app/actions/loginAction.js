@@ -29,7 +29,7 @@ export const loginError = (err)=>{
 
 export const fetchLogin = (username,password)=>{
     return (dispatch)=>{
-        return fetch(`https://api.xlhb.com/v1/user/login.api`,{
+        return fetch(`https://yufaapi.xlhb.com/v1/user/login.api`,{
             method: 'POST',
             headers: {
                 Accept: 'application/json',

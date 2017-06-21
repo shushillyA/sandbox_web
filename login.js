@@ -125,7 +125,7 @@ function post(){
         return str;
     })(postData);
     if(req){
-        req.open("POST", "https://api.xlhb.com/v1/user/login.api", true);
+        req.open("POST", "https://yufaapi.xlhb.com/v1/user/login.api", true);
         req.setRequestHeader("Content-Type","application/x-www-form-urlencoded; charset=UTF-8");
         req.send(postData);
         req.onreadystatechange = function(){

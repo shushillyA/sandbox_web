@@ -45,12 +45,12 @@ class PlayLoader {
         if(loadList.length === 0 && this.waterList) this.loadfinish()                            //没有要下载的沙具，直接跳到完成方法
 
         for (let loadData of loadList) {
-            FetchHelper.fetch('https://api.xlhb.com/v1/sandbox/sandbox-model.api', {        //获取沙具的信息
+            FetchHelper.fetch('https://yufaapi.xlhb.com/v1/sandbox/sandbox-model.api', {        //获取沙具的信息
                 model_id: loadData.mid,
                 token: "sess_538f84a87d0018a97dfdb27c740013ea"                                     //应该由后台传过来
             })
                 .then((json) => {
-                    let rootUrl = `https://api.xlhb.com/v1/sandbox/sandbox-encrypt.api?rootUrl=${json.data.obj_url}/&model_id=${loadData.mid}&version=${json.data.version}&fileName=`
+                    let rootUrl = `https://yufaapi.xlhb.com/v1/sandbox/sandbox-encrypt.api?rootUrl=${json.data.obj_url}/&model_id=${loadData.mid}&version=${json.data.version}&fileName=`
                     let fileName = json.data.obj_file
 
                     fetch(rootUrl + fileName).then((response) => {                   //下载浏览器缓存

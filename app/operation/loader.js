@@ -15,12 +15,12 @@ class Loader {
      * @param loadIcon 缩略图
      */
     loadListAdd(position, id, ms, loadIcon) { //缓冲load区，一个一个的加载，其他的看回放的，一样的
-        FetchHelper.fetch('https://api.xlhb.com/v1/sandbox/sandbox-model.api', {
+        FetchHelper.fetch('https://yufaapi.xlhb.com/v1/sandbox/sandbox-model.api', {
             model_id: id,
             token: sessionStorage.access_token
         })
             .then((json) => {
-                let rootUrl = `https://api.xlhb.com/v1/sandbox/sandbox-encrypt.api?rootUrl=${json.data.obj_url}/&model_id=${id}&version=${json.data.version}&fileName=`
+                let rootUrl = `https://yufaapi.xlhb.com/v1/sandbox/sandbox-encrypt.api?rootUrl=${json.data.obj_url}/&model_id=${id}&version=${json.data.version}&fileName=`
                 let fileName = json.data.obj_file
                 fetch(rootUrl + fileName).then((response) => {
                     return response.blob();
@@ -67,7 +67,7 @@ class Loader {
                 height: 600,
                 width: 800
             }, (data) => {
-                FetchHelper.fetch('https://api.xlhb.com/v1/timestorage/push-ts-stage.api', {
+                FetchHelper.fetch('https://yufaapi.xlhb.com/v1/timestorage/push-ts-stage.api', {
                     access_token: sessionStorage.access_token,
                     ts_sign: 'sandplay_screenshot',
                     ts_storage: {

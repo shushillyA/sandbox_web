@@ -2,7 +2,7 @@ import fetchHelper from '../lib/fetchHelper'
 
 export const fetchSubmitBtn = (access_token,time,answer,imageList,model)=>{
     return (dispatch)=>{
-        return fetchHelper.fetch(`https://api.xlhb.com/v1/sandbox/bs-upload-report.api`,{
+        return fetchHelper.fetch(`https://yufaapi.xlhb.com/v1/sandbox/bs-upload-report.api`,{
             access_token:access_token,
             version:0,
             weidu1:time,

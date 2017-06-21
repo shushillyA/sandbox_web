@@ -131,7 +131,7 @@ class Record{
     }
 
     upload(){
-        FetchHelper.fetch(PRODUCTION?'https://api.xlhb.com/v1/timestorage/push-ts-stage.api':'https://api.xlhb.com/v1/timestorage/push-ts-stage.api',{
+        FetchHelper.fetch(PRODUCTION?'https://yufaapi.xlhb.com/v1/timestorage/push-ts-stage.api':'https://yufaapi.xlhb.com/v1/timestorage/push-ts-stage.api',{
             access_token:sessionStorage.access_token,
             ts_sign:'sandplay_video',
             ts_storage:this.recordData

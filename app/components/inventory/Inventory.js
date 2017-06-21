@@ -60,7 +60,6 @@ class Inventory extends React.Component{
     scroll(event) {
         event = event || window.event;
         this.mouseY = event.clientY - Y_top;//鼠标按下时滚动调在浏览器窗口内的位置
-
         this.InvRullBar_H = this.refs.InvRullBar.clientHeight-25;
         //封装toy内容向下拉动 函数
         this.set_toy_Y = (ref,ul_h) => {
@@ -96,44 +95,60 @@ class Inventory extends React.Component{
         this.startX = event.clientX;
         //定义num变量（用于定义下面移动时 接收当前clientX的序号）
         this.num = 0;
-
         this['clientX'+this.num] = event.clientX;
         let move = (ref) => {
             if(this.setData.currentSelect === 0){
-                console.log(this['动物']);
-                this.ul_width = (this['动物']) * 72 ;
+                console.log(this['动物'], '数量');
+                this.ul_width = (this['动物']) * 84 - 630;
                 this.x = 3
             }
             if(this.setData.currentSelect === 1){
-                console.log(this['建筑']);
-                this.ul_width = (this['建筑']) * 72 ;
+                console.log(this['建筑'], '数量');
+                this.ul_width = (this['建筑'] - 1) * 84 - 630;
                 this.x = 4
             }
             if(this.setData.currentSelect === 2){
-                this.ul_width = (this['交通工具']) * 72 ;
+                console.log(this['交通工具'], '数量');
+                this.ul_width = (this['交通工具'] - 1) * 84 -630;
                 this.x = 1
             }
             if(this.setData.currentSelect === 3){
-                this.ul_width = (this['人物']) * 72 ;
+                console.log(this['人物'], '数量');
+                // 这个this['人物']和模型数量不符
+                this.ul_width = (this['人物'] - 1) * 84 - 630;
                 this.x = 2
             }
             if(this.setData.currentSelect === 4){
-                console.log(this['物品']);
-                this.ul_width = (this['物品']) * 72 ;
+                // 6.21添加
+                console.log('syl')
+                console.log(this['物品'], '数量');
+                this.ul_width = (this['物品']) * 84 - 630;
                 this.x = 6
             }
             if(this.setData.currentSelect === 5){
-                this.ul_width = (this['植物']) * 72 ;
+                console.log(this['植物'], '数量');
+                this.ul_width = (this['植物']) * 84 - 630;
                 this.x = 5
+                console.log(this.ul_width, 'ul_width')
             }
             let inventory_width;
             if( document.body.clientWidth <= 1800) {
+                // inventory_width = 455
+                // 6.21
+                console.log('<1800')
                 inventory_width = 455
             }else {
-                inventory_width = 435
+                // inventory_width = 435
+                // 6.21
+                console.log('>1800')
+                // inventory_width = 390
+                inventory_width = 350
             }
             //可移动最大距离
-            this.moveX = this.ul_width - inventory_width;
+            // this.moveX = this.ul_width - inventory_width;
+            // 6.21修改
+            this.moveX = this.ul_width;
+            console.log(this.moveX, '移动最大距离')
             if(this.moveX > 0){
                 // console.log(this.moveX);
                 document.addEventListener('pointermove',this.d_m_x,false);

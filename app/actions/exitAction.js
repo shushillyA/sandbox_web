@@ -3,7 +3,7 @@ import fetch from 'isomorphic-fetch'
 export const fetchExit = (access_token)=>{
     return (dispatch)=>{
 
-        return fetch(`https://api.xlhb.com/v1/user/logout.api`,{
+        return fetch(`https://yufaapi.xlhb.com/v1/user/logout.api`,{
             method: 'POST',
             headers: {
                 Accept: 'application/json',

@@ -41,7 +41,7 @@ class GameScene extends ScreenAb {
                 height: 600,
                 width: 800
             }, (data) => {
-                FetchHelper.fetch('https://api.xlhb.com/v1/timestorage/push-ts-stage.api', {
+                FetchHelper.fetch('https://yufaapi.xlhb.com/v1/timestorage/push-ts-stage.api', {
                     access_token: sessionStorage.access_token,
                     ts_sign: 'sandplay_screenshot',
                     ts_storage: {
@@ -113,7 +113,7 @@ class GameScene extends ScreenAb {
             height: 600,
             width: 800
         }, (data) => {
-            FetchHelper.fetch('https://api.xlhb.com/v1/timestorage/push-ts-stage.api', {
+            FetchHelper.fetch('https://yufaapi.xlhb.com/v1/timestorage/push-ts-stage.api', {
                 access_token: sessionStorage.access_token,
                 ts_sign: 'sandplay_screenshot',
                 ts_storage: {
