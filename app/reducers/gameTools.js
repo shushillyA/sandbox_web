@@ -1,5 +1,7 @@
 const gameTools = (state={finish:false,helper:false,lock:false,music:false},action)=>{
-    switch (action.type){
+    console.log(action.type, '状态设置')
+    console.log(state, '状态对象')
+    switch (action.type){    // 这边改变finish状态
         case 'GAMEFINISH':
             return {
                 ...state,

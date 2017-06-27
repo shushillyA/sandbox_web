@@ -119,7 +119,11 @@ class GameScene extends ScreenAb {
                 ts_storage: {
                     image_name: `${window.imagecount++}`,
                     image_base64: data
-                },
+                }
+            }).then((data) => 
+            {
+                console.log(data)
+                console.log('成功')
             })
         })
         //新增接口

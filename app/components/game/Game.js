@@ -27,6 +27,8 @@ class Game extends React.Component {
         }, 500)
     }
     componentDidUpdate() {
+        console.log('看看是否自动执行')
+        console.log(this.props.game.finish)
         if (this.props.game.finish) {
             console.log("finish")
             this.gs.stopRecord()
